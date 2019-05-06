@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:iconize="clr-namespace:Plugin.Iconize;assembly=Plugin.Iconize"
+             x:Class="zeroAcidentesApp.Component.BarTitleContent">
+    <ContentView.Content>
+        
+        <StackLayout
+                Orientation="Horizontal"
+                Spacing="0"
+                Margin="0">
+
+                <iconize:IconLabel 
+                    FontSize="24"
+                    Margin="10"
+                    TextColor="{StaticResource YellowVolvo}" 
+                    HorizontalOptions="Start"
+                    HorizontalTextAlignment="Start"
+                    VerticalOptions="Center"
+                    VerticalTextAlignment="Center"
+                    Text="md-arrow-back">                    
+                    <iconize:IconLabel.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding BackCommand}" />
+                    </iconize:IconLabel.GestureRecognizers>
+                </iconize:IconLabel>
+
+                <Label 
+                    x:Name="xTitulo"
+                    Text="" 
+                    Margin="20,10,10,10"
+                    VerticalOptions="Center"
+                    Style="{StaticResource LabelDefaultTitle}" />
+
+            </StackLayout>
+        
+    </ContentView.Content>
+    
+</ContentView>
